@@ -1,6 +1,4 @@
 # ownCity
-Web application that displays different sections 
-with information about  own city.
 
 A web application that displays different sections with information about your home city. 
 The application should have the following sections:
