@@ -16,3 +16,12 @@ def facts(request):
 
 def contacts(request):
     return HttpResponse("<h2>Контактные телефоны городских служб</h2>")
+
+def history(request):
+    return HttpResponse("<h2>История.</h2>")
+
+def history_people(request):
+    return HttpResponse("<h2>Известные люди нашего города.")
+
+def history_photos(request):
+    return HttpResponse("<h2>Исторические фото</h2>")

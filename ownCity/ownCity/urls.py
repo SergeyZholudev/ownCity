@@ -24,6 +24,9 @@ urlpatterns = [
     re_path(r'^goverment/', views.goverment),
     re_path(r'^facts/', views.facts),
     re_path(r'^contacts/', views.contacts),
+    re_path(r'^history/people', views.history_people),
+    re_path(r'^history/photos', views.history_photos),
+    re_path(r'^history/', views.history),
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
 ]
