@@ -17,16 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import re_path
-from sitySite import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    re_path(r'^news/', views.news),
-    re_path(r'^goverment/', views.goverment),
-    re_path(r'^facts/', views.facts),
-    re_path(r'^contacts/', views.contacts),
-    re_path(r'^history/people', views.history_people),
-    re_path(r'^history/photos', views.history_photos),
-    re_path(r'^history/', views.history),
+    re_path(r'^news', TemplateView.as_view(template_name="news.html")),
+    re_path(r'^goverment', TemplateView.as_view(template_name="goverment.html")),
+    re_path(r'^facts', TemplateView.as_view(template_name="facts.html")),
+    re_path(r'^contacts', TemplateView.as_view(template_name="contacts.html")),
+    re_path(r'^history/people', TemplateView.as_view(template_name="people.html")),
+    re_path(r'^history/photos', TemplateView.as_view(template_name="photos.html")),
+    re_path(r'^history', TemplateView.as_view(template_name="history.html")),
+    re_path(r'^$', TemplateView.as_view(template_name="index.html")),
     path('admin/', admin.site.urls),
-    path('', views.index, name='home'),
 ]
